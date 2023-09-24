@@ -2,8 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main  # Change this to your main branch name
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -16,10 +17,12 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v2
       with:
-        java-version: 17
+        distribution: 'temurin'
+        java-version: '17'
     
-    - name: Build and Run Playwright Tests
-      run: |
-        cd StrumPlatform  # Change to your project's root directory
-        mvn clean test  # Change to the Maven command you use to run your Playwright tests
-
+    - name: Build & Install
+      run: mvn -B install -D skipTests --no-transfer-progress
+    - name: Install Playwright
+      run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+    - name: Run tests
+      run: mvn test
