@@ -8,7 +8,7 @@ import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.ElementHandle;
 
-public class SomethingWentWrong {
+public class SomethingWentWrongTest {
 
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
