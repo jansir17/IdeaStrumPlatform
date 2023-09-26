@@ -32,7 +32,7 @@ public class SomethingWentWrongTest {
             System.out.println(bugElement.innerText());
 
         }
-        else {System.out.println("Did not find any bug");}
+        else {System.out.println("Did not find any buggggg");}
         browser.close();
     }
 
