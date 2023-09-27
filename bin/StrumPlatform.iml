@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="jar://$USER_HOME$/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre8.jar!/" />
+  </component>
+</module>
