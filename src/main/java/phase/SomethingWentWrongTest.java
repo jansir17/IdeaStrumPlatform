@@ -9,7 +9,7 @@ public class SomethingWentWrongTest {
 
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
-        Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(true));
+        Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
 //		BrowserContext context = browser.newContext();
         Page page = browser.newPage();
         page.navigate("https://dev.strumplatform.com");

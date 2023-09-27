@@ -3,13 +3,17 @@ package phase;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+
+import org.testng.annotations.Test;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.ElementHandle;
 
 public class SomethingWentWrongTest {
-
+	
+	@Test
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
         Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
