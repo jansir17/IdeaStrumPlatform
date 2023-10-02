@@ -36,7 +36,7 @@ public class SomethingWentWrongTest {
             System.out.println(bugElement.innerText());
 
         }
-        else {System.out.println("Did not found any anomaly");}
+        else {System.out.println("Did not found any anomaly, changing from GIT");}
         browser.close();
     }
 
