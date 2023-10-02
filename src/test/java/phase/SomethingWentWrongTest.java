@@ -36,7 +36,7 @@ public class SomethingWentWrongTest {
             System.out.println(bugElement.innerText());
 
         }
-        else {System.out.println("Did not find any buggg");}
+        else {System.out.println("Did not found any anomaly");}
         browser.close();
     }
 
